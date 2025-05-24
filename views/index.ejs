@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweets</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tweets</h1>
+    <% for (let post of posts) {%>
+    <div>
+      <h3><i>@<%=post.username %></i></h3>
+      <h4><%= post.tweet %></h4>
+      <button>
+        <a href="http://localhost:3000/posts/<%=post.id%>">Show in detail</a>
+      </button>
+      <button>
+        <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit</a>
+      </button>
+      <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </div>
+    <% } %>
+    <button><a href="http://localhost:3000/posts/new">New Tweet</a></button>
+  </body>
+</html>

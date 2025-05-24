@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Tweet</title>
+    <style>
+        
+h1{
+    color: grey;
+    text-align: right;
+    font-size: 0.5em;
+    text-decoration: underline  maroon;
+}
+h3{
+    font-size: 1.5em;
+}
+div{
+    background-color: azure;
+    border: 1px solid grey;
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <h1>Post id: <%= post.id %></h1>
+     <div>
+            <h3><i>@<%=post.username %></i> </h3>
+            <h4><%= post.tweet %></h4>
+        </div>
+</body>
+</html>
